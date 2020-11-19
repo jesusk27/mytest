@@ -1,0 +1,294 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f9cc30 !important;
+    width: 100%;
+    height: 50%;
+    /*overflow-x: hidden;
+    overflow-y: hidden;
+    /* #background-image: url(../imagenes/fondo3.png); */
+    /* background-size:cover;
+    background-position:center; */
+}
+
+.container{
+    background-color:#f9cc30;
+    /*/padding-left: 10px;*/ 
+    width:100%;
+    position:absolute;
+    top:100%;
+    height:60vh;
+}
+
+.img{
+    background:white;   
+}
+
+.img .logo-loteria{
+    width: 50px; 
+    height: 50px;
+}
+.panel-default{
+    height: 265px; 
+    border: 5px;
+    background: white;
+}
+.img-container {
+    position: relative;
+    text-align: center;  
+}
+
+.panel .panel-default{
+    width: 100%;
+    height: 35%;
+}
+
+.img-container .number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:red;    
+}  
+
+/*cambiando color a los numeros sorteo Kino Tv*/
+.loteria-super-kino .img-container .number{ 
+    color: blue;   
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    margin-top: -50%;
+}
+   /*Retirando imagen de los bolos sorteo Kino Tv*/           
+.loteria-super-kino .img-container .logo-loteria{
+    visibility: hidden;}
+
+.loteria-loteria-real .img-container .number{
+    color: darkgreen;
+    font-size:large;
+}
+
+.loteria-loteria-real{
+    position: absolute;
+   
+   
+}
+
+.loteria-la-suerte\.p.panel-default{
+    position: relative;
+    bottom:103.4%;
+    z-index:loteria-real; 
+}
+
+.loteria-la-primera\.p.panel-default{
+    position: relative;
+    bottom:103.4%;
+}
+
+.loteria-quiniela-pale{
+    position: relative;
+    right:103% ;
+    z-index:loteria-pega-mas;
+}
+
+.loteria-loteria-nacional{
+    position: relative;
+    left:103% ;
+}
+
+.loteria-loto{
+    position: relative;
+    left:103% ;
+    bottom: 208%;
+}
+.loteria-loto .img-container .number{
+color:black;
+}
+
+.tabla1{
+    border-spacing: 50%;
+    border-width: 50%;
+}    
+.clock{
+    position: absolute;
+    left: 88%;
+    top: 0%;
+    font-size: 20px;
+    color: #FFFFFF;
+    /*color:darkblue;
+    color: #FFFFFF;
+    background:red;*/
+    text-shadow: 0 0 5px #FFF, 
+    0 0 10px #FFF, 0 0 15px #FFF, 
+    0 0 20px #49ff18, 
+    0 0 30px #49FF18, 0 0 40px #49FF18, 
+    0 0 55px #49FF18, 0 0 75px #49ff18;
+     
+}
+
+.date{
+    visibility: hidden;
+    position: absolute;
+    top: 10%;
+    font-size: 20px;
+    color:darkblue;
+}
+
+
+.carousel-slide{
+    position: relative;
+    height:30vh;
+    /*width: 200px; border-left:30px solid transparent; 
+    width: 200px; border-left:30px solid transparent; 
+    border-right:0px solid transparent; 
+    border-top:0px solid transparent;
+    border-bottom:40px solid #0080FF;                         
+    border-right: 0px solid transparent; 
+    border-top: 0px solid transparent;
+    border-bottom:40px solid #0080FF;*/
+}
+.carousel-items{
+    transition: transform 2s ease, opacity .5s ease-out;
+}
+.fe_sorteos{
+    font-size:small;
+    font-weight: bold;
+}
+
+.piep{
+    width: 97%;
+    height: 30px;
+    color:white;
+    font-size:x-small;
+    font-weight: bold;
+    text-align: center;  
+    /*border-radius: 0px 0px 50px 50px;*/
+    background: red;
+    top:235px;
+    text-align: center;
+    right: 3px;
+    
+ 
+    
+}
+/*.piep:before{
+    content: "";
+    position: absolute;
+    top:-10px;
+    left:0px;
+    border-left:5px solid transparent;
+    border-right:5px solid black;
+    border-top:5px solid transparent;
+    border-bottom:5px solid ;
+    
+}*/
+
+.pie_f{
+    background: blue;
+    color:white;
+    font-size: xx-small;
+    border-right: 60px solid transparent;
+    border-radius: 40px 40px 0px 0px;
+    bottom:0;
+    position:fixed;
+        /*border-left: 60px solid transparent;
+    /*border-top: 100px solid #428bca;*/
+    font: message-box;
+}
+
+.acumulado21{
+    width: 100%;
+    height: 160px;
+    background:black;
+    text-align: justify;
+    color:white;
+    margin:auto;
+    /*position: absolute;
+    top: 10px;
+    margin-left: 0%;*/
+    font-size:x-small;
+}
+.acumulado{
+    margin: 0 auto;
+}
+.acumulado td{
+    text-align: center; 
+     margin: auto; 
+     font-size: x-large;
+     
+}
+.acu1{
+    color:red;
+    font-size:25px;
+    font-weight: bold;
+}
+
+.lotoacu{
+    color:blue;
+    font-weight: bold;
+}
+.masacu{
+    color:red;
+    font-weight: bold;
+}
+.super{
+    color:blue;
+    font-weight: bold;
+}
+.sliders{
+    width:100%;
+    height: 100vh;    
+}
+.sliders2{
+    width:100%;
+    height: 100vh;    
+}
+.desplegar{
+    display: flex;
+    top: 0%;
+}
+
+.carrusel{
+    width: 100%;
+    height: 40vh;
+}
+.resultados-loterias{
+    display: flex;
+}
+.datog1 h1{
+    color:transparent;
+    font-weight: bold;
+    -webkit-text-stroke: 3px whitesmoke;
+    animation: animado 3s linear infinite;
+}
+@keyframes animado{
+    0%, 80%{
+        color: #333;
+    }
+    100%{
+        color:greenyellow;
+        text-shadow: 0 0 10px #fff
+                     0 0 20px #fff
+                     0 0 40px #fff
+                     0 0 60px #fff
+                     0 0 80px #fff
+                     0 0 120px #fff
+                     0 0 160px #fff;
+    
+
+ }
+}
+#mislider{
+    width:100%;
+    height:100 vh;
+    position: relative;
+    top:0%;
+}
+.mis_sliders{
+    width:100%;
+    height:100 vh;
+    position: absolute;
+    top:0;
+ 
+}

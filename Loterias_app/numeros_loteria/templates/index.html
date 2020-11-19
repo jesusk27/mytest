@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html class ="no-js">
+   <head>
+      <title>Publicidad Slider</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+        <link rel="stylesheet" type="text/css" href="/static/css/estilos.css">
+        <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/css/bootstrap-responsive.min.css">
+        <link  rel="stylesheet" href="/static/css/main.css">
+        <link  rel="stylesheet" href="/static/css/animate.css">
+        <script src="/static/jscript/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="static/jscript/jquery.js"></script>
+        <script src="/static/jscript/jquery.backstretch.min.js"></script>
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script> 
+        <script type ="text/javascript" src="/static/jscript/jquery.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> 
+ <link rel="stylesheet" href="/static/bootstrap/js/bootstrap.js">
+        
+<script src="/static/jquery/jquery.backstretch.min.js"></script>
+
+{% comment %} <div class="mis_sliders" id="mislider"></div> {% endcomment %}
+{% comment %} <script>
+    jquery("#mislider").backstretch([
+      "/static/imagenes/pt_slider.png",
+      "/static/imagenes/pt-slider2.png",
+      "/static/imagenes/pt_slider.png"
+      ], {
+        duration: 4000,
+        transition: 'push_left|push_right|cover_up|cover_down|fade',
+        transitionDuration: 250
+    });
+</script>  	
+<script src="/static/jquery/jquery.js"></script>
+
+<script src="/static/jquery/jquery.backstretch.js"></script>
+
+<script>
+jquery("#mislider").backstretch([
+"/static/imagenes/pt_slider.png",
+"/static/imagenes/pt-slider2.png",
+"/static/imagenes/pt_slider.png"
+],{duration: 4000,
+transition: 'push_left|push_right|cover_up|cover_down|fade',
+   
+
+transitionDuration: 250
+});
+    
+</script> {% endcomment %}
+
+    
+</head>
+  <body>
+      <div class="resultados-loterias">
+        <div id="carouselExampleSlidesOnly" class="carousel-slide" data-ride="carousel">
+          <div class="carousel-inner">
+                  <div class="carousel-item active" data-interval="10000">
+                      <img class="d-block w-100" src="static/imagenes\cabezera.png " alt="First slide">
+                  </div>
+                  <div class="carousel-item" data-interval="5000">
+                      <img class="d-block w-100" src="" alt="">
+                        <div class="acumulado21 animate__animated animate__zoomIn">  
+                            <table class="acumulado">
+                              <tr>
+                              <td><span class="sorteo">PARA EL PR&Oacute;XIMO SORTEO</sorteo></td>
+                              </tr> 
+                              <tr>
+                              <td><span class="acu1">{{loterias.acumulado}}</span></td>
+                              </tr>
+                              <tr>
+                              <td>MILLONES</td>
+                              </tr>  
+                              <tr>
+                              <td><span class="lotoacu">{{loterias.acumuladoloto}}</span> MILLONES LOTO +  <span class="masacu">{{loterias.acumuladomas}}</span> MILLONES LOTO M&Aacute;S + <span class="super">200</span> MILLONES SUPER LOTO</td>
+                              </tr>
+                          </table>  
+                      </div>
+                    </div>
+                    <div class="carousel-item" data-interval="5000">
+                        <img class="d-block w-100" src="" alt="">
+                    </div> 
+                    <div class="carousel-item" data-interval="5000">
+                          <img class="d-block w-100" src="static/imagenes\loto-transmision.png" width="400%" alt="Third slide">
+                    </div>
+                    <class div ="lotoganador"> 
+                        <table class="ganador" width="150%">
+                            <tr>
+                                <td>
+                                  <div class = "datog1" id="dato1">
+                                      <h1>NUEVO
+                                        <br>
+                                          GANADOR
+                                      </h1>        
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="datog2" id="dato2"> 
+                                    <img style="border-radius: 100px; border: 10px solid red;
+                                    padding: 0px;" src = "{{loterias.iganador}}">
+                                  </div> 
+                                </td>         
+                                <td>  
+                                  <div class="datog3" id="dato3">    
+                                      <p><h3>{{loterias.ganador}}</h3></p>
+                                  </div>
+                              </td>
+                            </tr> 
+                          </table> 
+                    </div>   
+                </div>
+        </div>
+              <table class="tabla1" cellspacing="100" cellpadding="0">
+                    <!--table  border ="0" cellspacing="50" cellpadding="0">
+                      <!--img src="/static/imagenes\cabezera.png" width="200%"--> 
+                        <!--img src="/static/imagenes\cabezera.png" width="80%" height="25%"-->   
+                  <tr>
+                    <td>             
+                          <div class="date">
+                            <span id="weekDay" class="weekDay"></span>
+                            <span id="day" class="day"></span>
+                              -
+                            <span id="month" class="month"></span> 
+                              -              
+                            <span id="year" class="year"></span>
+                          </div>
+            
+                          <div class="clock" style="height: 5px; 
+                                width: 200px; border-left:30px solid transparent; 
+                                border-right:0px solid transparent; 
+                                border-top:0px solid transparent;border-bottom:40px solid #0080FF;" >
+                                <span id="hours" class="hours"></span> 
+                                  :
+                                
+                                <span id="minutes" class="minutes"></span> 
+                                  :
+                                <span id="seconds" class="seconds"></span>
+                                <span id="ampm" class="ampm"></span>
+                          </div>
+                  </td>  
+              </tr>
+        </table>
+      <!--div class="container"  padding-left: 1px;-->
+        <div class="container-fluid">
+
+          <div class="row">
+            {% for loteria in loterias.loterias%}
+              
+            <div class="col-3" style="margin-bottom: 10px; padding: 0 5px">
+
+              <div class="panel panel-default loteria-{{loteria.nombre}}" padding-left: 1px;>
+                <div class="panel-heading text-center">
+                  <img class="logo-loteria" src="/static/imagenes/{{loteria.nombre}}.png" width="200"> 
+                  <!--p>Sorteo de Lunes a Sábado a las 08:55 PM / Domingos 05:55 PM.-->
+                        <p class="fe_sorteos">{{loteria.fecha_res}}</p>
+                        
+
+                </div>
+                <div class="panel-body numeros-sorteos">
+                  <div class="row">
+
+                  {% for numero in loteria.numeros %}
+
+                    {% if loteria.numeros|length > 10 %}
+                    <div class="offset-s1 col-2">
+                      {% elif loteria.numeros|length == 3 %}
+                      {% if forloop.first%}
+                      <div class="offset-2 col-3">
+                        {% else %}
+                        <div class="col-3">
+                          {% endif %}
+                          {% elif loteria.numeros|length < 10 %}
+                          <div class="offset-s1 col-4">
+                            {% endif %}
+                            <div class='img-container'>
+                              <img class="logo-loteria" src="/static/imagenes/resultado-numero.png" width="50">
+                              <div class="number">
+                              {% if loteria.numeros|length == 8 %}
+                                {% if forloop.last %}
+                                <h4 style="color:darkblue"><strong>{{numero }}</strong></h4>
+                                {% elif forloop.counter == 7 %}
+                                  <h4 style="color:red"><strong>{{numero }}</strong></h4>
+                                {% else %}
+                                <h4><strong>{{numero }}</strong></h4>
+                                {% endif %}
+                                
+                              {% else %}
+                              <h4><strong>{{numero}}</strong></h4>
+                              {% endif %}
+                              </div>
+
+
+                            </div>
+                          </div>
+                          {% endfor %}
+                          
+      
+                          </div>
+                        
+      
+                      </div>
+                      <footer  class="piep">
+                        <span id="piep" class="piep"></span>
+                        {{loteria.dias_venta}}
+                          </footer>            
+      
+                          </div>
+                  </div>
+                  {% endfor %}
+                  </div>
+              </div>
+              </div>
+              </div>
+              </div>      
+              <!--div class="row"> 
+              <div class="col-lg-12">  
+              <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>      
+              </div>     
+              </div--> 
+              </div>     
+              </div>
+              
+        <!--script src="js/jquery.backstretch.min.js"></script-->
+        <footer class="pie_f">
+          <marquee><strong><h3>Anuncie Su Negocio Con  Nosotros, En caso de Problemas Técnicos Favor de contactarnos  al (809)-646-4000</h3> </strong></marquee>
+        </footer>
+      </div>
+          <!--div class="mostrar_slider">
+                  <section id="slide-1">
+                    <div class="sliders">
+                    <img src="/static/imagenes\pt_slider.png" >  
+                        </div>  
+                        <section id="slide-2">
+                    <div class= "slider2">
+                        <img src="/static/imagenes\pt-slider2.png">
+                    </div-->
+              </div>   
+              <script src="/static/jscript/clock.js"></script> 
+              <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+              <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+              <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
+              <script>$('.carousel').carousel(); </script> 
+                           
+              <!--Mostrar y Oculta las Loterias Nacional y Nacional Gana Mas-->
+                <script>
+                $(document).ready(function() {
+                function hideShowContainers() {
+                //Validamos si contenedor2 tiene la clase 'jsHideContainer'  
+                if ($('.loteria-loteria-nacional.panel-default').hasClass('jsHideContainer')) {
+                //Eliminamos la clase 'jsHideContainer' para validar la parte negativa del condicional
+                $('.loteria-loteria-nacional.panel-default').removeClass('jsHideContainer');
+                //Ocultamos el contenedor1 mientras pasan 3 segundos  
+                $('.loteria-loteria-nacional-gana-mas.panel-default').hide(5000);
+                 //Mostramos el contenedor2 mientras pasan 3 segundos
+                $('.loteria-loteria-nacional.panel-default').show(5000);
+                } else {
+                //Ocultamos el contenedor2 mientras pasan 3 segundos
+                $('.loteria-loteria-nacional.panel-default').hide(5000);
+                //Mostramos el contenedor1 mientras pasan 3 segundos
+                $('.loteria-loteria-nacional-gana-mas.panel-default').show(5000);
+                //Finalmente adicionamos la clase jsHideContainer para validar la parte positiva del condicional
+                $('.loteria-loteria-nacional.panel-default').addClass('jsHideContainer');
+                            }
+                          }
+                //Ejecutamos la función para que evalue los condicionales cada 5 segundos
+            
+                  setInterval(hideShowContainers, 8000);
+                          });
+                </script>
+              </script>
+              
+              <!--Mostrar y Oculta las Loterias Pega3 y Quiniela Pale-->
+              <script>
+                $(document).ready(function() {
+                function hideShowContainers() {
+                //Validamos si contenedor2 tiene la clase 'jsHideContainer'  
+                if ($('.loteria-quiniela-pale.panel-default').hasClass('jsHideContainer')) {
+                //Eliminamos la clase 'jsHideContainer' para validar la parte negativa del condicional
+                $('.loteria-quiniela-pale.panel-default').removeClass('jsHideContainer');
+                //Ocultamos el contenedor1 mientras pasan 3 segundos  
+                $('.loteria-pega-mas.panel-default').hide(5000);
+                 //Mostramos el contenedor2 mientras pasan 3 segundos
+                $('.loteria-quiniela-pale.panel-default').show(5000);
+                } else {
+                //Ocultamos el contenedor2 mientras pasan 3 segundos
+                $('.loteria-quiniela-pale.panel-default').hide(5000);
+                //Mostramos el contenedor1 mientras pasan 3 segundos
+                $('.loteria-pega-mas.panel-default').show(5000);
+                //Finalmente adicionamos la clase jsHideContainer para validar la parte positiva del condicional
+                $('.loteria-quiniela-pale.panel-default').addClass('jsHideContainer');
+                            }
+                          }
+                //Ejecutamos la función para que evalue los condicionales cada 5 segundos
+            
+                  setInterval(hideShowContainers, 8000);
+                          });
+                </script>
+              </script>
+
+              
+  </body>
+</html>

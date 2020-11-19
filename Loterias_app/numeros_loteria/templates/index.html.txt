@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Publicidad Slider</title>
+<script type ="text/javascript" src="/static/jscript/jquery.js"></script>
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <link rel="stylesheet" type="text/css" href="/static/css/estilos.css">
+  <link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/bootstrap-responsive.min.css">
+  <link rel="stylesheet" href="/static/css/main.css">
+  <script src="/static/jscript/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="/static/jscript/jquery.backstretch.min.js"></script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script> 
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+   integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body overflow-y: visible;> 
+  <!--div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="static/imagenes\cabezera.png" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="static/imagenes\loto-transmision.png" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="static/imagenes\acumulado.png" alt="Third slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="static/imagenes\win1.png" alt="Third slide">
+    </div>
+  </div-->
+    <table border="0" cellspacing="50" cellpadding="0">
+      <img src="/static/imagenes\cabezera.png" width="200%"> 
+            <!--img src="/static/imagenes\cabezera.png" width="80%" height="25%"--> 
+      <tr>
+      <td>             
+      <div class="date">
+      <span id="weekDay" class="weekDay"></span>
+      <span id="day" class="day"></span>
+      -
+      <span id="month" class="month"></span> 
+      -              
+      <span id="year" class="year"></span>
+      </div>
+      
+      <div class="clock">
+      <span id="hours" class="hours"></span> 
+      :
+                     
+      <span id="minutes" class="minutes"></span> 
+      :
+      <span id="seconds" class="seconds"></span>
+      <span id="ampm" class="ampm"></span>
+      </div>
+      </td>  
+    </tr>
+  </table>
+
+ <!--div class="container"  padding-left: 1px;-->
+  <div class="container-fluid">
+
+    <div class="row">
+      {% for loteria in loterias%}
+
+      <div class="col-3" style="margin-bottom: 10px; padding: 0 5px">
+
+        <div class="panel panel-default loteria-{{loteria.nombre}}" padding-left: 1px;>
+          <div class="panel-heading text-center">
+            <img class="logo-loteria" src="/static/imagenes/{{loteria.nombre}}.png" width="150"> 
+            <!--p>Sorteo de Lunes a Sábado a las 08:55 PM / Domingos 05:55 PM.-->
+                   <!--p> {{loteria.fecha_res}} </p-->
+          </div>
+          <div class="panel-body numeros-sorteos">
+            <div class="row">
+
+            {% for numero in loteria.numeros %}
+
+              {% if loteria.numeros|length > 10 %}
+              <div class="offset-s1 col-2">
+                {% elif loteria.numeros|length == 3 %}
+                {% if forloop.first%}
+                <div class="offset-2 col-3">
+                  {% else %}
+                  <div class="col-3">
+                    {% endif %}
+                    {% elif loteria.numeros|length < 10 %}
+                    <div class="offset-s1 col-4">
+                      {% endif %}
+                      <div class='img-container'>
+                        <img class="logo-loteria" src="/static/imagenes/resultado-numero.png" width="50">
+                        <div class="number">
+                          <h2>{{numero}}</h2>
+                          
+                        </div>
+                        
+
+                      </div>
+                    </div>
+                    {% endfor %}
+                    
+ 
+                    </div>
+                   
+ 
+                </div>
+                {{loteria.dias_venta}}
+                <!--footer  class="piep">
+                  <span id="piep" class="piep"></span>
+                  {{loteria.dias_venta}}
+                      </footer-->            
+ 
+                    </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+            
+        </div>
+            
+        </div>
+            
+            
+        
+        <div class="row">
+              
+        <div class="col-lg-12">
+                
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+         
+        
+        </div>
+        
+                
+        </div>
+            
+        </div>
+            
+        
+        </div>
+<script src="/static/jscript/clock.js"></script> 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> 
+<script>$('.carousel').carousel(); </script>
+
+
+<!--footer class="pie_f">
+  <marquee><strong><h3>Anunciece con Nosotros,  En caso de Cualquier Problema Tecnico Contacte</h3> </strong></marquee>
+</footer-->            
+
+
+  
+</body>
+
+</html>
+
